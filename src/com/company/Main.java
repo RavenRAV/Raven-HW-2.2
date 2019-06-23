@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Random r = new Random();
         int randoma = r.nextInt(107) - 0;
-        System.out.println("Здрвствуйте, Вам " + randoma + " лет");
+        System.out.println("Здрвствуйте, Вам " + randoma + " лет!");
 
         System.out.println("Как вас зовут?");
         Scanner word = new Scanner(System.in);
