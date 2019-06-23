@@ -6,14 +6,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Random r = new Random();
-        int randoma = r.nextInt(107) - 0;
-        System.out.println("Здрвствуйте, Вам " + randoma + " лет!");
 
         System.out.println("Как вас зовут?");
         Scanner word = new Scanner(System.in);
         String name = word.nextLine();
-        int age = randoma;
+        int age = generateRandomAge();
         System.out.println("Какая температура на улице?");
         int temperature = word.nextInt();
         if (temperature > 30 || temperature < -20 && age <= 20 || age > 45 ) {
@@ -28,5 +25,11 @@ public class Main {
             System.out.println(name + " Вы можете пойти в гости");
         }
 
+    }
+    public static int generateRandomAge() {
+        Random r = new Random();
+        int randoma = r.nextInt(107) - 0;
+        System.out.println("Здрвствуйте, Вам " + randoma + " лет!");
+        return  randoma;
     }
 }
